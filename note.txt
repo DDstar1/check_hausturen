@@ -1,0 +1,5 @@
+okay so be using default attribtes to compare with my excel file 
+
+and make sure the number of items in defailt attributes and attributes are the same 
+
+so it would be purchasble

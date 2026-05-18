@@ -1,0 +1,985 @@
+{
+  "id": 24135,
+  "name": "Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003)",
+  "slug": "elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003",
+  "permalink": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/",
+  "date_created": "2026-04-27T16:16:45",
+  "date_created_gmt": "2026-04-27T14:16:45",
+  "date_modified": "2026-05-17T09:11:04",
+  "date_modified_gmt": "2026-05-17T07:11:04",
+  "type": "variable",
+  "status": "publish",
+  "featured": false,
+  "catalog_visibility": "visible",
+  "description": "<p>[vc_row][vc_column][vc_column_text]<span style=\"vertical-align: inherit;\"><span style=\"vertical-align: inherit;\">[/vc_column_text][/vc_column][/vc_row]</span></span></p>\n",
+  "short_description": "",
+  "sku": "",
+  "price": "886.03",
+  "regular_price": "",
+  "sale_price": "",
+  "date_on_sale_from": null,
+  "date_on_sale_from_gmt": null,
+  "date_on_sale_to": null,
+  "date_on_sale_to_gmt": null,
+  "on_sale": false,
+  "purchasable": true,
+  "total_sales": 0,
+  "virtual": false,
+  "downloadable": false,
+  "downloads": [],
+  "download_limit": -1,
+  "download_expiry": -1,
+  "external_url": "",
+  "button_text": "",
+  "tax_status": "taxable",
+  "tax_class": "",
+  "manage_stock": false,
+  "stock_quantity": null,
+  "backorders": "no",
+  "backorders_allowed": false,
+  "backordered": false,
+  "low_stock_amount": null,
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+    "length": "",
+    "width": "",
+    "height": ""
+  },
+  "shipping_required": true,
+  "shipping_taxable": true,
+  "shipping_class": "",
+  "shipping_class_id": 0,
+  "reviews_allowed": true,
+  "average_rating": "0.00",
+  "rating_count": 0,
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "parent_id": 0,
+  "purchase_note": "",
+  "categories": [
+    {
+      "id": 1288,
+      "name": "Elegant_Atrium/Salon - Felsgrau Herholz Innentüren",
+      "slug": "elegant_atrium-salon-felsgrau-herholz-innentueren"
+    },
+    {
+      "id": 1280,
+      "name": "Felsgrau - Herholz Unifarben Innentüren",
+      "slug": "felsgrau-herholz-unifarben-innentueren"
+    },
+    {
+      "id": 483,
+      "name": "Herholz Innentüren",
+      "slug": "herholz-innentueren"
+    },
+    {
+      "id": 494,
+      "name": "Herholz Unifarben (RAL) Türen",
+      "slug": "herholz-unifarben-ral-tueren"
+    }
+  ],
+  "brands": [],
+  "tags": [],
+  "images": [
+    {
+      "id": 15666,
+      "date_created": "2025-02-18T17:08:41",
+      "date_created_gmt": "2025-02-18T15:08:41",
+      "date_modified": "2025-02-18T17:08:48",
+      "date_modified_gmt": "2025-02-18T15:08:48",
+      "src": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg",
+      "name": "Atrium_41_mit _LOE_1301 V 003",
+      "alt": "Atrium_41_mit _LOE_1301 V 003",
+      "srcset": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg 754w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-142x300.jpg 142w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-484x1024.jpg 484w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-727x1536.jpg 727w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-300x634.jpg 300w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-600x1268.jpg 600w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-28x60.jpg 28w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-43x90.jpg 43w",
+      "sizes": "(max-width: 754px) 100vw, 754px",
+      "thumbnail": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003-300x634.jpg"
+    },
+    {
+      "id": 13307,
+      "date_created": "2024-06-07T10:37:19",
+      "date_created_gmt": "2024-06-07T06:37:19",
+      "date_modified": "2024-06-07T10:37:19",
+      "date_modified_gmt": "2024-06-07T06:37:19",
+      "src": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1.jpg",
+      "name": "Herholz Türblatt -SR-Kante 800&#215;800",
+      "alt": "",
+      "srcset": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1.jpg 800w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-300x300.jpg 300w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-150x150.jpg 150w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-768x768.jpg 768w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-600x600.jpg 600w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-100x100.jpg 100w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-60x60.jpg 60w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-90x90.jpg 90w",
+      "sizes": "(max-width: 800px) 100vw, 800px",
+      "thumbnail": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Tuerblatt-SR-Kante-800x800-1-300x300.jpg"
+    },
+    {
+      "id": 13308,
+      "date_created": "2024-06-07T10:37:22",
+      "date_created_gmt": "2024-06-07T06:37:22",
+      "date_modified": "2024-06-07T10:37:22",
+      "date_modified_gmt": "2024-06-07T06:37:22",
+      "src": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1.jpg",
+      "name": "Stumpf-Kante eckig 800&#215;800",
+      "alt": "",
+      "srcset": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1.jpg 800w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-300x300.jpg 300w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-150x150.jpg 150w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-768x768.jpg 768w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-600x600.jpg 600w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-100x100.jpg 100w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-60x60.jpg 60w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-90x90.jpg 90w",
+      "sizes": "(max-width: 800px) 100vw, 800px",
+      "thumbnail": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-Kante-eckig-800x800-1-300x300.jpg"
+    },
+    {
+      "id": 13309,
+      "date_created": "2024-06-07T10:37:24",
+      "date_created_gmt": "2024-06-07T06:37:24",
+      "date_modified": "2024-06-07T10:37:24",
+      "date_modified_gmt": "2024-06-07T06:37:24",
+      "src": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1.jpg",
+      "name": "Stumpf-S-Design Softkante 800&#215;800",
+      "alt": "",
+      "srcset": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1.jpg 800w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-300x300.jpg 300w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-150x150.jpg 150w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-768x768.jpg 768w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-600x600.jpg 600w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-100x100.jpg 100w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-60x60.jpg 60w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-90x90.jpg 90w",
+      "sizes": "(max-width: 800px) 100vw, 800px",
+      "thumbnail": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Stumpf-S-Design-Softkante-800x800-1-300x300.jpg"
+    },
+    {
+      "id": 13306,
+      "date_created": "2024-06-07T10:37:17",
+      "date_created_gmt": "2024-06-07T06:37:17",
+      "date_modified": "2024-06-07T10:37:17",
+      "date_modified_gmt": "2024-06-07T06:37:17",
+      "src": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie.jpg",
+      "name": "Herholz Kantengeometrie",
+      "alt": "",
+      "srcset": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie.jpg 1012w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-264x300.jpg 264w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-901x1024.jpg 901w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-768x873.jpg 768w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-300x341.jpg 300w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-600x682.jpg 600w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-53x60.jpg 53w, https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-79x90.jpg 79w",
+      "sizes": "(max-width: 1012px) 100vw, 1012px",
+      "thumbnail": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Herholz-Kantengeometrie-300x341.jpg"
+    }
+  ],
+  "attributes": [
+    {
+      "id": 10,
+      "name": "Höhe",
+      "slug": "pa_hoehe",
+      "position": 0,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Elegant_Lichtöffnung_1"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Farbe",
+      "slug": "pa_farbe",
+      "position": 1,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Elegant_Felsgrau"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Kante",
+      "slug": "pa_kante",
+      "position": 2,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Elegant_Schiebe 2"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Verglasung",
+      "slug": "pa_verglasung",
+      "position": 3,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Elegant_gläser_2"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Zargen Group",
+      "slug": "pa_zargen-group",
+      "position": 4,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Group 2"
+      ]
+    }
+  ],
+  "default_attributes": [
+    {
+      "id": 10,
+      "name": "Höhe",
+      "option": "elegant_lichtoeffnung_1"
+    },
+    {
+      "id": 6,
+      "name": "Farbe",
+      "option": "elegant_felsgrau"
+    },
+    {
+      "id": 14,
+      "name": "Verglasung",
+      "option": "elegant_glaeser_2"
+    },
+    {
+      "id": 12,
+      "name": "Zargen Group",
+      "option": "group-2"
+    }
+  ],
+  "variations": [
+    24136
+  ],
+  "grouped_products": [],
+  "menu_order": 637,
+  "price_html": "<span class=\"from\">Ab: </span><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&euro;</span>565,00</bdi></span> <small> <small class=\"woocommerce-price-suffix\">inkl. 19% MwSt. zzgl. Versandkosten &amp; Materialzuschlag</small></small>",
+  "related_ids": [
+    13358,
+    14505,
+    13436,
+    13469,
+    17380
+  ],
+  "meta_data": [
+    {
+      "id": 993557,
+      "key": "_product_addons",
+      "value": []
+    },
+    {
+      "id": 993558,
+      "key": "_product_addons_exclude_global",
+      "value": "0"
+    },
+    {
+      "id": 993559,
+      "key": "_shop_swatches",
+      "value": "no"
+    },
+    {
+      "id": 993560,
+      "key": "wc_productdata_options",
+      "value": [
+        {
+          "_product_block": "0",
+          "_top_content": "",
+          "_bottom_content": "",
+          "_bubble_new": "",
+          "_bubble_text": "",
+          "_custom_tab_title": "",
+          "_custom_tab": "",
+          "_product_video": "",
+          "_product_video_size": "",
+          "_product_video_placement": ""
+        }
+      ]
+    },
+    {
+      "id": 993561,
+      "key": "_mkl_pc__is_configurable",
+      "value": "no"
+    },
+    {
+      "id": 993562,
+      "key": "flexible_quantity_settings",
+      "value": {
+        "fq": {
+          "label": "",
+          "unit": "item",
+          "price": "",
+          "sale_price": "",
+          "increment": "",
+          "min_range": "",
+          "max_range": "",
+          "decimals": {
+            "other": {
+              "type": "fixed",
+              "fixed": {
+                "label": "",
+                "unit": "item",
+                "size": ""
+              },
+              "user": {
+                "label": "",
+                "unit": "item",
+                "increment": "",
+                "min_quantity": "",
+                "max_quantity": ""
+              }
+            }
+          },
+          "pricing_table": {
+            "items": {
+              "from": [
+                ""
+              ],
+              "to": [
+                ""
+              ],
+              "price": [
+                ""
+              ],
+              "sale_price": [
+                ""
+              ]
+            }
+          },
+          "shipping_table": {
+            "items": {
+              "from": [
+                ""
+              ],
+              "to": [
+                ""
+              ],
+              "shipping_class": [
+                "-1"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 993563,
+      "key": "tm_meta_cpf",
+      "value": {
+        "mode": "settings",
+        "price_display_mode": "from",
+        "price_display_override": "565",
+        "price_display_override_to": "",
+        "price_display_override_sale": "",
+        "override_display": "",
+        "override_final_total_box": "",
+        "override_show_options_total": "",
+        "override_show_final_total": ""
+      }
+    },
+    {
+      "id": 993564,
+      "key": "tm_meta",
+      "value": {
+        "tmfbuilder": {
+          "sections_internal_name": [
+            "Abschnitt"
+          ],
+          "section_header_size": [
+            "2"
+          ],
+          "section_header_title": [
+            ""
+          ],
+          "section_header_title_mode": [
+            ""
+          ],
+          "section_header_title_position": [
+            ""
+          ],
+          "section_header_title_color": [
+            ""
+          ],
+          "section_header_subtitle": [
+            ""
+          ],
+          "section_header_subtitle_position": [
+            ""
+          ],
+          "section_header_subtitle_color": [
+            ""
+          ],
+          "section_divider_type": [
+            "none"
+          ],
+          "sections": [
+            1
+          ],
+          "sections_slides": [
+            ""
+          ],
+          "sections_tabs_labels": [
+            ""
+          ],
+          "sections_size": [
+            "w100"
+          ],
+          "sections_uniqid": [
+            "68cd1133d53a40.05364888"
+          ],
+          "sections_style": [
+            ""
+          ],
+          "sections_background_color": [
+            ""
+          ],
+          "sections_label_background_color": [
+            ""
+          ],
+          "sections_subtitle_background_color": [
+            ""
+          ],
+          "sections_placement": [
+            "before"
+          ],
+          "sections_type": [
+            ""
+          ],
+          "sections_popupbutton": [
+            ""
+          ],
+          "sections_popupbuttontext": [
+            ""
+          ],
+          "sections_class": [
+            ""
+          ],
+          "sections_clogic": [
+            ""
+          ],
+          "sections_logicrules": [
+            "{\"toggle\":\"show\",\"rules\":[]}"
+          ],
+          "sections_logic": [
+            ""
+          ],
+          "sections_repeater": [
+            ""
+          ],
+          "sections_repeater_quantity": [
+            ""
+          ],
+          "sections_repeater_min_rows": [
+            ""
+          ],
+          "sections_repeater_max_rows": [
+            ""
+          ],
+          "sections_repeater_button_label": [
+            ""
+          ],
+          "element_type": [
+            "variations"
+          ],
+          "div_size": [
+            "w100"
+          ],
+          "variations_internal_name": [
+            "Variationen"
+          ],
+          "variations_header_size": [
+            "3"
+          ],
+          "variations_header_title": [
+            ""
+          ],
+          "variations_header_title_mode": [
+            ""
+          ],
+          "variations_header_title_position": [
+            ""
+          ],
+          "variations_header_title_color": [
+            ""
+          ],
+          "variations_header_subtitle": [
+            ""
+          ],
+          "variations_header_subtitle_position": [
+            ""
+          ],
+          "variations_header_subtitle_color": [
+            ""
+          ],
+          "variations_divider_type": [
+            "none"
+          ],
+          "variations_disabled": "1",
+          "variations_options": {
+            "pa_hoehe": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "elegant_lichtoeffnung_1": ""
+              },
+              "variations_image": {
+                "elegant_lichtoeffnung_1": ""
+              },
+              "variations_imagep": {
+                "elegant_lichtoeffnung_1": ""
+              }
+            },
+            "pa_farbe": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "elegant_felsgrau": ""
+              },
+              "variations_image": {
+                "elegant_felsgrau": ""
+              },
+              "variations_imagep": {
+                "elegant_felsgrau": ""
+              }
+            },
+            "pa_kante": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "elegant_schiebe-2": ""
+              },
+              "variations_image": {
+                "elegant_schiebe-2": ""
+              },
+              "variations_imagep": {
+                "elegant_schiebe-2": ""
+              }
+            },
+            "pa_verglasung": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "elegant_glaeser_2": ""
+              },
+              "variations_image": {
+                "elegant_glaeser_2": ""
+              },
+              "variations_imagep": {
+                "elegant_glaeser_2": ""
+              }
+            },
+            "pa_zargen-group": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "group-2": ""
+              },
+              "variations_image": {
+                "group-2": ""
+              },
+              "variations_imagep": {
+                "group-2": ""
+              }
+            }
+          },
+          "variations_uniqid": [
+            "6a0969707579f0.91055246"
+          ],
+          "variations_logicrules": [
+            "false"
+          ]
+        }
+      }
+    },
+    {
+      "id": 993565,
+      "key": "_wpb_vc_js_status",
+      "value": "true"
+    },
+    {
+      "id": 993566,
+      "key": "_yoast_wpseo_primary_product_cat",
+      "value": "483"
+    },
+    {
+      "id": 993567,
+      "key": "_yoast_wpseo_estimated-reading-time-minutes",
+      "value": "1"
+    },
+    {
+      "id": 993568,
+      "key": "_yoast_wpseo_wordproof_timestamp",
+      "value": ""
+    },
+    {
+      "id": 993569,
+      "key": "_yoast_wpseo_content_score",
+      "value": "90"
+    },
+    {
+      "id": 993570,
+      "key": "_yoast_wpseo_primary_Oberflächen",
+      "value": ""
+    },
+    {
+      "id": 993571,
+      "key": "_yoast_wpseo_primary_oberflache",
+      "value": ""
+    },
+    {
+      "id": 993572,
+      "key": "_yoast_wpseo_primary_product_brand",
+      "value": ""
+    },
+    {
+      "id": 993573,
+      "key": "_alg_checkout_fees_enabled_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993574,
+      "key": "_alg_checkout_fees_title_bacs",
+      "value": ""
+    },
+    {
+      "id": 993575,
+      "key": "_alg_checkout_fees_global_override_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993576,
+      "key": "_alg_checkout_fees_type_bacs",
+      "value": "fixed"
+    },
+    {
+      "id": 993577,
+      "key": "_alg_checkout_fees_value_bacs",
+      "value": ""
+    },
+    {
+      "id": 993578,
+      "key": "_alg_checkout_fees_min_fee_bacs",
+      "value": ""
+    },
+    {
+      "id": 993579,
+      "key": "_alg_checkout_fees_max_fee_bacs",
+      "value": ""
+    },
+    {
+      "id": 993580,
+      "key": "_alg_checkout_fees_coupons_rule_bacs",
+      "value": "disabled"
+    },
+    {
+      "id": 993581,
+      "key": "_alg_checkout_fees_title_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 993582,
+      "key": "_alg_checkout_fees_global_override_fee_2_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993583,
+      "key": "_alg_checkout_fees_type_2_bacs",
+      "value": "fixed"
+    },
+    {
+      "id": 993584,
+      "key": "_alg_checkout_fees_value_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 993585,
+      "key": "_alg_checkout_fees_min_fee_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 993586,
+      "key": "_alg_checkout_fees_max_fee_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 993587,
+      "key": "_alg_checkout_fees_coupons_rule_2_bacs",
+      "value": "disabled"
+    },
+    {
+      "id": 993588,
+      "key": "_alg_checkout_fees_min_cart_amount_bacs",
+      "value": ""
+    },
+    {
+      "id": 993589,
+      "key": "_alg_checkout_fees_max_cart_amount_bacs",
+      "value": ""
+    },
+    {
+      "id": 993590,
+      "key": "_alg_checkout_fees_rounding_enabled_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993591,
+      "key": "_alg_checkout_fees_rounding_precision_bacs",
+      "value": ""
+    },
+    {
+      "id": 993592,
+      "key": "_alg_checkout_fees_tax_enabled_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993593,
+      "key": "_alg_checkout_fees_tax_class_bacs",
+      "value": "0"
+    },
+    {
+      "id": 993594,
+      "key": "_alg_checkout_fees_exclude_shipping_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993595,
+      "key": "_alg_checkout_fees_add_taxes_bacs",
+      "value": "no"
+    },
+    {
+      "id": 993596,
+      "key": "_alg_checkout_fees_percent_usage_bacs",
+      "value": "for_all_cart"
+    },
+    {
+      "id": 993597,
+      "key": "_alg_checkout_fees_fixed_usage_bacs",
+      "value": "once"
+    },
+    {
+      "id": 993598,
+      "key": "_mkl_pc__variable_configuration_mode",
+      "value": "share_layers_config"
+    }
+  ],
+  "stock_status": "instock",
+  "has_options": true,
+  "post_password": "",
+  "global_unique_id": "",
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003) &#8212; Innentürenshop</title>\n<!-- Nur für Administratoren: diese Seite zeigt keine Meta-Beschreibung, da bisher keine vorhanden ist. Verfasse entweder eine speziell für diese Seite oder gehe in das [Yoast SEO - Einstellungen]-Menü und richte eine Vorlage ein. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"de_DE\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003) &#8212; Innentürenshop\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Innentürenshop\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"article:modified_time\" content=\"2026-05-17T07:11:04+00:00\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"754\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"1594\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:label1\" content=\"Geschätzte Lesezeit\" class=\"yoast-seo-meta-tag\" />\n\t<meta name=\"twitter:data1\" content=\"1 Minute\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/\",\"url\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/\",\"name\":\"Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003) &#8212; Innentürenshop\",\"isPartOf\":{\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/innentuerenshop.paultec.de\\/wp-content\\/uploads\\/2024\\/06\\/Atrium_41_mit-_LOE_1301-V-003.jpg\",\"datePublished\":\"2026-04-27T14:16:45+00:00\",\"dateModified\":\"2026-05-17T07:11:04+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/#breadcrumb\"},\"inLanguage\":\"de\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"de\",\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/#primaryimage\",\"url\":\"https:\\/\\/innentuerenshop.paultec.de\\/wp-content\\/uploads\\/2024\\/06\\/Atrium_41_mit-_LOE_1301-V-003.jpg\",\"contentUrl\":\"https:\\/\\/innentuerenshop.paultec.de\\/wp-content\\/uploads\\/2024\\/06\\/Atrium_41_mit-_LOE_1301-V-003.jpg\",\"width\":754,\"height\":1594,\"caption\":\"Atrium_41_mit _LOE_1301 V 003\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/produkt\\/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Startseite\",\"item\":\"https:\\/\\/innentuerenshop.paultec.de\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Shop\",\"item\":\"https:\\/\\/innentuerenshop.paultec.de\\/shop\\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003)\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/#website\",\"url\":\"https:\\/\\/innentuerenshop.paultec.de\\/\",\"name\":\"Innentürenshop\",\"description\":\"Innentüren online kaufen\",\"publisher\":{\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/innentuerenshop.paultec.de\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"de\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/#organization\",\"name\":\"innentuerenshop.paultec.de\",\"url\":\"https:\\/\\/innentuerenshop.paultec.de\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"de\",\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"http:\\/\\/innentuerenshop.paultec.de\\/wp-content\\/uploads\\/2020\\/08\\/Logo-Innentuerenshop-black.png\",\"contentUrl\":\"http:\\/\\/innentuerenshop.paultec.de\\/wp-content\\/uploads\\/2020\\/08\\/Logo-Innentuerenshop-black.png\",\"width\":1077,\"height\":387,\"caption\":\"innentuerenshop.paultec.de\"},\"image\":{\"@id\":\"https:\\/\\/innentuerenshop.paultec.de\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003) &#8212; Innentürenshop",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/",
+    "og_locale": "de_DE",
+    "og_type": "article",
+    "og_title": "Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003) &#8212; Innentürenshop",
+    "og_url": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/",
+    "og_site_name": "Innentürenshop",
+    "article_modified_time": "2026-05-17T07:11:04+00:00",
+    "og_image": [
+      {
+        "width": 754,
+        "height": 1594,
+        "url": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Geschätzte Lesezeit": "1 Minute"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/",
+          "url": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/",
+          "name": "Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003) &#8212; Innentürenshop",
+          "isPartOf": {
+            "@id": "https://innentuerenshop.paultec.de/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/#primaryimage"
+          },
+          "image": {
+            "@id": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/#primaryimage"
+          },
+          "thumbnailUrl": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg",
+          "datePublished": "2026-04-27T14:16:45+00:00",
+          "dateModified": "2026-05-17T07:11:04+00:00",
+          "breadcrumb": {
+            "@id": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/#breadcrumb"
+          },
+          "inLanguage": "de",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "de",
+          "@id": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/#primaryimage",
+          "url": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg",
+          "contentUrl": "https://innentuerenshop.paultec.de/wp-content/uploads/2024/06/Atrium_41_mit-_LOE_1301-V-003.jpg",
+          "width": 754,
+          "height": 1594,
+          "caption": "Atrium_41_mit _LOE_1301 V 003"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://innentuerenshop.paultec.de/produkt/elegant-atrium-41-felsgrau-inkl-lichtoeffnung-loe-1301-v-003/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Startseite",
+              "item": "https://innentuerenshop.paultec.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Shop",
+              "item": "https://innentuerenshop.paultec.de/shop/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Elegant Atrium 41 Felsgrau– (inkl. Lichtöffnung LÖ 1301 V 003)"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://innentuerenshop.paultec.de/#website",
+          "url": "https://innentuerenshop.paultec.de/",
+          "name": "Innentürenshop",
+          "description": "Innentüren online kaufen",
+          "publisher": {
+            "@id": "https://innentuerenshop.paultec.de/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://innentuerenshop.paultec.de/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "de"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://innentuerenshop.paultec.de/#organization",
+          "name": "innentuerenshop.paultec.de",
+          "url": "https://innentuerenshop.paultec.de/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "de",
+            "@id": "https://innentuerenshop.paultec.de/#/schema/logo/image/",
+            "url": "http://innentuerenshop.paultec.de/wp-content/uploads/2020/08/Logo-Innentuerenshop-black.png",
+            "contentUrl": "http://innentuerenshop.paultec.de/wp-content/uploads/2020/08/Logo-Innentuerenshop-black.png",
+            "width": 1077,
+            "height": 387,
+            "caption": "innentuerenshop.paultec.de"
+          },
+          "image": {
+            "@id": "https://innentuerenshop.paultec.de/#/schema/logo/image/"
+          }
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://innentuerenshop.paultec.de/wp-json/wc/v3/products/24135",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://innentuerenshop.paultec.de/wp-json/wc/v3/products"
+      }
+    ]
+  }
+}
