@@ -20,7 +20,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import openpyxl
 
-from utils import WOO_STORES, excel_value_to_slug, is_ab_price_showing, extract_ab_price
+from utils import WOO_STORES, excel_value_to_slug, is_ab_price_showing, extract_ab_price, parse_price
 
 # ── Target categories and the columns they map to ────────────────────────────
 
@@ -71,11 +71,18 @@ def _get_category_id(cat_slug, store):
     return cats[0]["id"]
 
 
+def _to_english(price_str) -> str:
+    value = parse_price(price_str)
+    if value is None:
+        return ""
+    return f"{value:.2f}"
+
+
 def _prices(product):
-    """Return (base_price_str, ab_price_str)."""
+    """Return (base_price_str, ab_price_str) in English format."""
     if is_ab_price_showing(product):
-        return product.get("price") or "", extract_ab_price(product)
-    return product.get("regular_price") or product.get("price") or "", ""
+        return _to_english(product.get("price") or ""), _to_english(extract_ab_price(product))
+    return _to_english(product.get("regular_price") or product.get("price") or ""), ""
 
 # ── Store picker ──────────────────────────────────────────────────────────────
 
@@ -136,11 +143,12 @@ def main():
     ws = wb.active
 
     headers = [str(c.value).strip() if c.value else "" for c in next(ws.iter_rows(max_row=1))]
+    headers_lower = [h.lower() for h in headers]
 
     def ci(name):
-        """1-based column index, or None if not found."""
+        """1-based column index, case-insensitive, or None if not found."""
         try:
-            return headers.index(name) + 1
+            return headers_lower.index(name.lower()) + 1
         except ValueError:
             return None
 
