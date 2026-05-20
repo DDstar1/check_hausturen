@@ -26,18 +26,28 @@ from utils import WOO_STORES, excel_value_to_slug, is_ab_price_showing, extract_
 
 TARGETS = [
     {
-        "cat_slug":    "rodenberg-premium-aluminium-haustuerfuellungen",
-        "link_keyword": "aluminium",
-        "id_col":      "Aluminium_id",
-        "base_col":    "Aluminium_base_price",
-        "ab_col":      "Aluminium_ab_price",
+        "cat_slug": "rodenberg-premium-aluminium-haustueren",
+        "id_col":   "Aluminium_tur_id",
+        "base_col": "Aluminium_tur_base_price",
+        "ab_col":   "Aluminium_tur_ab_price",
     },
     {
-        "cat_slug":    "rodenberg-premium-kunststoff-haustuerfuellungen",
-        "link_keyword": "kunststoff",
-        "id_col":      "Kunstoff_id",
-        "base_col":    "Kunstoff_base_price",
-        "ab_col":      "Kunstoff_ab_price",
+        "cat_slug": "rodenberg-premium-kunststoff-haustueren",
+        "id_col":   "Kunstoff_tur_id",
+        "base_col": "Kunstoff_tur_base_price",
+        "ab_col":   "Kunstoff_tur_ab_price",
+    },
+    {
+        "cat_slug": "rodenberg-premium-aluminium-haustuerfuellungen",
+        "id_col":   "Aluminium_turfullungen_id",
+        "base_col": "Aluminium_turfullungen_base_price",
+        "ab_col":   "Aluminium_turfullungen_ab_price",
+    },
+    {
+        "cat_slug": "rodenberg-premium-kunststoff-haustuerfuellungen",
+        "id_col":   "Kunstoff_turfullungen_id",
+        "base_col": "Kunstoff_turfullungen_base_price",
+        "ab_col":   "Kunstoff_turfullungen_ab_price",
     },
 ]
 
@@ -116,7 +126,7 @@ def main():
     store = _pick_store()
 
     # ── Fetch products for each category and build slug -> product lookup ──────
-    cat_data = []  # list of (target_dict, lookup_dict, products_list)
+    cat_data = []  # list of (target_dict, cat_id, lookup_dict, products_list)
     for target in TARGETS:
         slug = target["cat_slug"]
         print(f"\nFetching  {slug} …", end=" ", flush=True)
@@ -126,16 +136,12 @@ def main():
 
         lookup = {}
         for p in products:
-            lookup[p["slug"]] = p                           # WC post slug
+            lookup[p["slug"]] = p
             ns = excel_value_to_slug(p["name"])
             if ns:
-                lookup.setdefault(ns, p)                    # slugified name fallback
+                lookup.setdefault(ns, p)
 
-        # Debug: show a few WC slugs so mismatches are visible
-        sample = list(lookup.keys())[:5]
-        print(f"  Sample WC slugs: {sample}")
-
-        cat_data.append((target, lookup, products))
+        cat_data.append((target, cat_id, lookup, products))
 
     # ── Open workbook ─────────────────────────────────────────────────────────
     print(f"\nOpening {xlsx_path.name} …")
@@ -159,7 +165,7 @@ def main():
         sys.exit(1)
 
     # Warn about missing target columns
-    for target, _lookup, _prods in cat_data:
+    for target, _cat_id, _lookup, _prods in cat_data:
         for key in ("id_col", "base_col", "ab_col"):
             col = target[key]
             if ci(col) is None:
@@ -187,7 +193,7 @@ def main():
         name_slug = excel_value_to_slug(raw_str)
         matched   = False
 
-        for target, lookup, products in cat_data:
+        for target, cat_id, lookup, products in cat_data:
             # Exact slug match first, then substring fallback
             product = lookup.get(name_slug)
             if product is None:
@@ -199,10 +205,9 @@ def main():
             if product is None:
                 continue
 
-            # Confirm the permalink contains the expected material keyword
-            keyword = target.get("link_keyword", "")
-            if keyword and keyword not in product.get("permalink", "").lower():
-                print(f"  SKIP {product['id']} — permalink missing '{keyword}': {product.get('permalink', '')}")
+            # Confirm the product actually belongs to this category
+            product_cat_ids = {c["id"] for c in product.get("categories", [])}
+            if cat_id not in product_cat_ids:
                 continue
 
             matched = True

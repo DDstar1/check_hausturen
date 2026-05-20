@@ -6,7 +6,7 @@ from PySide6.QtCore import QThread, Signal
 import requests
 from requests.auth import HTTPBasicAuth
 
-from utils import has_tm_form, is_ab_price_showing, extract_ab_price, prices_match
+from utils import has_tm_form, is_ab_price_showing, extract_ab_price, prices_match, parse_price
 
 
 def _api_get(endpoint: str, store: dict, params: dict = None) -> dict | list:
@@ -84,7 +84,7 @@ class ApiWorker(QThread):
         # ── Purchasable: default_attributes count must equal attributes count ──
         all_attrs     = product.get("attributes", [])
         default_attrs = product.get("default_attributes", [])
-        purchasable   = len(all_attrs) > 0 and len(default_attrs) == len(all_attrs)
+        purchasable   = product.get("purchasable", False)
         form          = has_tm_form(product)
         self.log.emit(
             f"  Attributes: {len(all_attrs)}  Default attrs: {len(default_attrs)}"
@@ -122,7 +122,11 @@ class ApiWorker(QThread):
         )
         self.log.emit(f"  Vars match={vars_match}  mismatch={mismatch!r}")
 
-        displayed_price = website_ab if ab_showing else website_price
+        def _fmt(s):
+            v = parse_price(s)
+            return f"{v:.2f}" if v is not None else s
+
+        displayed_price = _fmt(website_ab) if ab_showing else _fmt(website_price)
         self.row_ready.emit([
             name, category, material, pid,
             str(purchasable), str(form),
