@@ -21,13 +21,15 @@ class Step4(QWidget):
         title.setObjectName("step_title")
         layout.addWidget(title)
 
-        # Start/Stop buttons live in the nav bar (see MainWindow).
+        # Start/Stop/Confirm buttons live in the nav bar (see MainWindow).
         self.btn_start = QPushButton("▶  Start Validation")
         self.btn_start.setFixedHeight(38)
         self.btn_stop = QPushButton("■  Stop")
         self.btn_stop.setProperty("danger", True)
         self.btn_stop.setFixedHeight(38)
         self.btn_stop.setEnabled(False)
+        self.btn_confirm = QPushButton("Continue →")
+        self.btn_confirm.setFixedHeight(38)
 
         self.progress = QProgressBar()
         self.progress.setValue(0)

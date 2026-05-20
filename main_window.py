@@ -10,19 +10,16 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, QThread, Signal
 from PySide6.QtWidgets import QGraphicsBlurEffect
 
-from steps import Step1, Step2, Step3, Step4, Step5
+from steps import StepMode, StepCat, Step1, Step2, Step3, Step4, Step5
 from worker import ApiWorker, _api_get
+from worker_compare import CompareWorker, HEADERS_W2M, HEADERS_M2W
+from worker_set import SetProductsWorker, SET_HEADERS
 from overlay import LoadingOverlay
-from utils import excel_value_to_slug
+from utils import excel_value_to_slug, RESULT_HEADERS
 
 
 class _ValidationThread(QThread):
-    """Runs WooCommerce attribute/term validation in the background.
-
-    Also fetches ALL attributes and ALL their terms so the result can be
-    reused by Step 3's dropdowns and the ApiWorker — no repeated fetches.
-    """
-    # ok_lines, issues, attrs_list, terms_cache
+    """Runs WooCommerce attribute/term validation in the background."""
     done   = Signal(list, list, list, object)
     failed = Signal(str)
 
@@ -30,7 +27,7 @@ class _ValidationThread(QThread):
         super().__init__()
         self.store             = store
         self.selected_var_cols = selected_var_cols
-        self.excel_data        = excel_data   # {col_name: set of display values}
+        self.excel_data        = excel_data
 
     def run(self):
         try:
@@ -42,8 +39,7 @@ class _ValidationThread(QThread):
     def _validate(self):
         wc_attrs = _api_get("products/attributes", self.store, {"per_page": 100})
 
-        # Fetch ALL terms for every attribute up front
-        terms_cache = {}   # attr_id -> {slug: display_name}
+        terms_cache = {}
         for a in wc_attrs:
             try:
                 raw = _api_get(
@@ -99,10 +95,18 @@ class _ValidationThread(QThread):
                     f"{len(decoded_terms)} terms on site)"
                 )
 
-        # attrs_list for Step 3 dropdowns: [{id, name}]
         attrs_list = [{"id": a["id"], "name": _html.unescape(a["name"])} for a in wc_attrs]
-
         return ok_lines, issues, attrs_list, terms_cache
+
+
+# ── Stack indices ──────────────────────────────────────────────────────────────
+_IDX_MODE = 0
+_IDX_S1   = 1
+_IDX_S2   = 2
+_IDX_S3   = 3
+_IDX_S4   = 4
+_IDX_S5   = 5
+_IDX_CAT  = 6
 
 
 class MainWindow(QMainWindow):
@@ -110,14 +114,18 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("check_hastur — Product Validator")
         self.setMinimumSize(960, 680)
-        self.worker = None
-        self._wb = None
-        self._sheet_name = None
-        self._table_ref = None
-        self._store = None
-        self._attrs_list    = []    # [{id, name}] — fetched once during validation
-        self._terms_cache   = {}    # {attr_id: {slug: display_name}}
-        self._chosen_prefix = None  # which ID column set the user selected
+        self.worker         = None
+        self.compare_worker = None
+        self.set_worker     = None
+        self._wb            = None
+        self._sheet_name    = None
+        self._table_ref     = None
+        self._store         = None
+        self._attrs_list    = []
+        self._terms_cache   = {}
+        self._chosen_prefix = None
+        self._mode          = "check_masterlist"
+        self._compare_config = None
 
         central = QWidget()
         self.setCentralWidget(central)
@@ -126,13 +134,15 @@ class MainWindow(QMainWindow):
         ml.setSpacing(0)
 
         # Steps
-        self.stack = QStackedWidget()
-        self.s1 = Step1()
-        self.s2 = Step2()
-        self.s3 = Step3()
-        self.s4 = Step4()
-        self.s5 = Step5()
-        for s in (self.s1, self.s2, self.s3, self.s4, self.s5):
+        self.stack  = QStackedWidget()
+        self.smode  = StepMode()
+        self.s1     = Step1()
+        self.s2     = Step2()
+        self.s3     = Step3()
+        self.s4     = Step4()
+        self.s5     = Step5()
+        self.scat   = StepCat()
+        for s in (self.smode, self.s1, self.s2, self.s3, self.s4, self.s5, self.scat):
             self.stack.addWidget(s)
         ml.addWidget(self.stack, stretch=1)
 
@@ -145,7 +155,7 @@ class MainWindow(QMainWindow):
         self.btn_back = QPushButton("← Back")
         self.btn_back.setEnabled(False)
         self.btn_next = QPushButton("Next →")
-        self.step_lbl = QLabel("Step 1 of 5")
+        self.step_lbl = QLabel("")
         self.step_lbl.setStyleSheet("color: #6c7086;")
         navl.addWidget(self.btn_back)
         navl.addStretch()
@@ -154,21 +164,26 @@ class MainWindow(QMainWindow):
         navl.addWidget(self.btn_next)
         navl.addWidget(self.s4.btn_start)
         navl.addWidget(self.s4.btn_stop)
+        navl.addWidget(self.s4.btn_confirm)
         self.s4.btn_start.hide()
         self.s4.btn_stop.hide()
+        self.s4.btn_confirm.hide()
         ml.addWidget(nav)
 
         self.btn_back.clicked.connect(self._go_back)
         self.btn_next.clicked.connect(self._go_next)
         self.s4.btn_start.clicked.connect(self._start)
         self.s4.btn_stop.clicked.connect(self._stop)
+        self.s4.btn_confirm.clicked.connect(self._confirm_product)
+        self.smode.mode_chosen.connect(self._on_mode_chosen)
 
-        # Overlay — child of central so it naturally covers it
-        self._overlay = LoadingOverlay(central)
+        self._overlay   = LoadingOverlay(central)
         self._nav_frame = nav
         self._val_thread = None
         self._blur_stack = None
         self._blur_nav   = None
+
+        self._update_nav()
 
     def resizeEvent(self, event):
         super().resizeEvent(event)
@@ -190,15 +205,25 @@ class MainWindow(QMainWindow):
         self._overlay.start(text)
 
     def _stop_spinner(self):
-        """Stop the spinner animation but leave the blur on the content."""
         self._overlay.stop()
 
     def _remove_blur(self):
-        """Remove the blur from content (call after user dismisses any dialog)."""
         self.stack.setGraphicsEffect(None)
         self._nav_frame.setGraphicsEffect(None)
         self._blur_stack = None
         self._blur_nav   = None
+
+    # ------------------------------------------------------------------
+    # Mode selection
+    # ------------------------------------------------------------------
+
+    def _on_mode_chosen(self, mode: str):
+        self._mode = mode
+        if mode in ("check_masterlist", "set_products"):
+            self.stack.setCurrentIndex(_IDX_S1)
+        else:
+            self.stack.setCurrentIndex(_IDX_CAT)
+        self._update_nav()
 
     # ------------------------------------------------------------------
     # Navigation
@@ -209,14 +234,18 @@ class MainWindow(QMainWindow):
 
     def _go_back(self):
         i = self._idx()
-        if i > 0:
+        if i == _IDX_CAT:
+            self.stack.setCurrentIndex(_IDX_MODE)
+        elif i == _IDX_S4 and self._mode != "check_masterlist":
+            self.stack.setCurrentIndex(_IDX_CAT)
+        elif i > _IDX_MODE:
             self.stack.setCurrentIndex(i - 1)
-            self._update_nav()
+        self._update_nav()
 
     def _go_next(self):
         i = self._idx()
 
-        if i == 0:
+        if i == _IDX_S1:
             result = self.s1.get_table()
             if not result:
                 QMessageBox.warning(self, "No table", "Please select an Excel file and table first.")
@@ -225,46 +254,83 @@ class MainWindow(QMainWindow):
             self._wb, self._sheet_name, self._table_ref = result
             self.s2.load_columns(self._wb, self._sheet_name, self._table_ref)
 
-        elif i == 1:
+        elif i == _IDX_S2:
             _, id_columns, selected_var_cols = self.s2.get_config()
             if not id_columns:
                 QMessageBox.warning(
                     self, "No ID columns",
                     "Could not auto-detect any product ID columns.\n"
-                    "Name your ID columns so they end with '_id' (e.g. aluminum_id, kunstoff_id)."
+                    "Name your ID columns so they end with '_id'."
                 )
                 return
             duplicates = self._find_duplicate_ids(id_columns)
             if duplicates:
                 QMessageBox.warning(
                     self, "Duplicate IDs",
-                    "The following product IDs appear more than once across your ID columns:\n\n"
+                    "The following product IDs appear more than once:\n\n"
                     + ", ".join(sorted(duplicates))
                     + "\n\nPlease fix the Excel file before continuing."
                 )
                 return
-            # Kick off async validation — navigation to step 3 happens in the callback
             self._start_column_validation(selected_var_cols)
             return
 
-        if i < 4:
+        elif i == _IDX_CAT:
+            config = self.scat.get_config()
+            if not config:
+                return
+            self._compare_config = config
+            self.s4.log.clear()
+            self.s4.progress.setValue(0)
+            self.s4.status_lbl.setText("Ready. Click ▶ Start to begin.")
+            headers = HEADERS_W2M if config["mode"] == "website_to_masterlist" else HEADERS_M2W
+            self.s5.reset(headers)
+            self.stack.setCurrentIndex(_IDX_S4)
+            self._update_nav()
+            return
+
+        if _IDX_S1 <= i < _IDX_S5:
             self.stack.setCurrentIndex(i + 1)
             self._update_nav()
 
     def _update_nav(self):
         i = self._idx()
-        self.step_lbl.setText(f"Step {i+1} of 5")
-        self.btn_back.setEnabled(i > 0)
-        self.btn_next.setVisible(i < 3)
-        self.s4.btn_start.setVisible(i == 3)
-        self.s4.btn_stop.setVisible(i == 3)
+        if i == _IDX_MODE:
+            self.step_lbl.setText("")
+            self.btn_back.setEnabled(False)
+            self.btn_next.setVisible(False)
+            self.s4.btn_start.setVisible(False)
+            self.s4.btn_stop.setVisible(False)
+            self.s4.btn_confirm.setVisible(False)
+        elif i == _IDX_CAT:
+            self.step_lbl.setText("Category Compare")
+            self.btn_back.setEnabled(True)
+            self.btn_next.setVisible(True)
+            self.btn_next.setText("Next →")
+            self.s4.btn_start.setVisible(False)
+            self.s4.btn_stop.setVisible(False)
+            self.s4.btn_confirm.setVisible(False)
+        else:
+            step_num = i  # indices 1-5 map to steps 1-5
+            self.step_lbl.setText(f"Step {step_num} of 5")
+            self.btn_back.setEnabled(i > _IDX_MODE)
+            self.btn_next.setVisible(_IDX_S1 <= i < _IDX_S4)
+            self.btn_next.setText("Next →")
+            on_s4 = (i == _IDX_S4)
+            self.s4.btn_start.setVisible(on_s4)
+            self.s4.btn_stop.setVisible(on_s4)
+            if on_s4 and self._mode == "set_products":
+                self.s4.btn_start.setText("▶  Start Setting")
+            elif on_s4:
+                self.s4.btn_start.setText("▶  Start Validation")
+            if not on_s4:
+                self.s4.btn_confirm.setVisible(False)
 
     # ------------------------------------------------------------------
-    # Attribute column pre-validation (step 2 → 3)  async via thread
+    # Attribute column pre-validation (step 2 → 3)
     # ------------------------------------------------------------------
 
     def _find_duplicate_ids(self, id_columns: list) -> set:
-        """Return the set of product IDs that appear more than once across all ID columns."""
         ws = self._wb[self._sheet_name]
         table_cells = ws[self._table_ref]
         headers = [str(c.value).strip() if c.value else "" for c in table_cells[0]]
@@ -289,11 +355,10 @@ class MainWindow(QMainWindow):
     def _start_column_validation(self, selected_var_cols: list):
         if not selected_var_cols:
             self.s3.load_attributes(self._attrs_list, self._terms_cache)
-            self.stack.setCurrentIndex(2)
+            self.stack.setCurrentIndex(_IDX_S3)
             self._update_nav()
             return
 
-        # If multiple ID columns exist, ask the user which set to validate against
         _, id_columns, _ = self.s2.get_config()
         chosen_prefix = None
         if len(id_columns) > 1:
@@ -321,7 +386,6 @@ class MainWindow(QMainWindow):
 
         self._chosen_prefix = chosen_prefix
 
-        # Check price columns only for the selected prefix
         _, id_columns_all, _ = self.s2.get_config()
         cols_to_check = (
             [c for c in id_columns_all if c["prefix"] == chosen_prefix]
@@ -331,19 +395,18 @@ class MainWindow(QMainWindow):
         for idc in cols_to_check:
             prefix = idc["prefix"].capitalize()
             if not idc["base_price_col"]:
-                missing_price_cols.append(f"  • {prefix}: missing base price column (expected '{idc['prefix']}_base_price')")
+                missing_price_cols.append(f"  • {prefix}: missing base price column")
             if not idc["ab_price_col"]:
-                missing_price_cols.append(f"  • {prefix}: missing Ab price column (expected '{idc['prefix']}_ab_price')")
+                missing_price_cols.append(f"  • {prefix}: missing Ab price column")
         if missing_price_cols:
             QMessageBox.warning(
                 self, "Missing Price Columns",
-                "The following price columns were not found in the Excel file:\n\n"
+                "The following price columns were not found:\n\n"
                 + "\n".join(missing_price_cols)
                 + "\n\nAdd these columns to your Excel file before continuing."
             )
             return
 
-        # Pre-extract unique Excel values in the main thread (workbook is not thread-safe)
         ws          = self._wb[self._sheet_name]
         table_cells = ws[self._table_ref]
         headers     = [str(c.value).strip() if c.value else "" for c in table_cells[0]]
@@ -377,7 +440,7 @@ class MainWindow(QMainWindow):
         if not issues:
             self._remove_blur()
             self.s3.load_attributes(attrs_list, terms_cache)
-            self.stack.setCurrentIndex(2)
+            self.stack.setCurrentIndex(_IDX_S3)
             self._update_nav()
             return
 
@@ -417,20 +480,18 @@ class MainWindow(QMainWindow):
         self._remove_blur()
         if proceed:
             self.s3.load_attributes(attrs_list, terms_cache)
-            self.stack.setCurrentIndex(2)
+            self.stack.setCurrentIndex(_IDX_S3)
             self._update_nav()
 
     def _on_validation_failed(self, error: str):
         self._stop_spinner()
-        # Show error dialog while blur is still active, then remove
         QMessageBox.warning(
             self, "Validation Error",
             f"Could not connect to the WooCommerce API:\n{error}\n\n"
-            "Check your internet connection and API credentials.\n\n"
             "Proceeding without column validation."
         )
         self._remove_blur()
-        self.stack.setCurrentIndex(2)
+        self.stack.setCurrentIndex(_IDX_S3)
         self._update_nav()
 
     # ------------------------------------------------------------------
@@ -468,9 +529,7 @@ class MainWindow(QMainWindow):
                 if not raw_id or raw_id.lower() in ("none", ""):
                     continue
 
-                # Strip any decimal suffix that Excel might add (e.g. "20001.0")
                 product_id = raw_id.split(".")[0]
-
                 base_price = str(vals[bp_i]).strip() if bp_i is not None and vals[bp_i] else ""
                 ab_price   = str(vals[ap_i]).strip() if ap_i is not None and vals[ap_i] else ""
 
@@ -505,10 +564,17 @@ class MainWindow(QMainWindow):
         return rows
 
     # ------------------------------------------------------------------
-    # Worker lifecycle
+    # Worker lifecycle — Check Masterlist
     # ------------------------------------------------------------------
 
     def _start(self):
+        if self._mode == "set_products":
+            self._start_set()
+            return
+        if self._mode != "check_masterlist":
+            self._start_compare()
+            return
+
         try:
             rows = self._build_rows()
         except Exception as e:
@@ -519,15 +585,13 @@ class MainWindow(QMainWindow):
             return
 
         custom = self.s3.get_custom_checks()
-        print(f"[DEBUG] custom_checks at start: {custom}")
 
         total_products = sum(len(r["materials"]) for r in rows)
         self.s4.log.clear()
         self.s4.progress.setValue(0)
         self.s4.progress.setMaximum(total_products)
         self.s4.status_lbl.setText(f"Starting… ({total_products} products across {len(rows)} rows)")
-        self.s5.table.setRowCount(0)
-        self.s5.results.clear()
+        self.s5.reset(list(RESULT_HEADERS))
         self.s5.count_lbl.setText("0 rows")
 
         self.worker = ApiWorker(rows, custom, self._store, self._terms_cache)
@@ -544,12 +608,99 @@ class MainWindow(QMainWindow):
     def _stop(self):
         if self.worker:
             self.worker.stop()
-            self.s4.status_lbl.setText("Stopping…")
+        if self.compare_worker:
+            self.compare_worker.stop()
+        if self.set_worker:
+            self.set_worker.stop()
+        self.s4.btn_confirm.setVisible(False)
+        self.s4.status_lbl.setText("Stopping…")
 
     def _on_done(self):
         self.s4.btn_start.setEnabled(True)
         self.s4.btn_stop.setEnabled(False)
+        self.s4.btn_confirm.setVisible(False)
         self.btn_back.setEnabled(True)
-        self.s4.status_lbl.setText(f"Done — {len(self.s5.results)} products checked.")
-        self.stack.setCurrentIndex(4)
+        count = len(self.s5.results)
+        if self._mode == "set_products":
+            self.s4.status_lbl.setText(f"Done — {count} product(s) set.")
+        else:
+            self.s4.status_lbl.setText(f"Done — {count} products checked.")
+        self.stack.setCurrentIndex(_IDX_S5)
+        self._update_nav()
+
+    # ------------------------------------------------------------------
+    # Worker lifecycle — Set Products mode
+    # ------------------------------------------------------------------
+
+    def _start_set(self):
+        try:
+            rows = self._build_rows()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not process Excel:\n{e}")
+            return
+        if not rows:
+            QMessageBox.warning(self, "No rows", "No product rows with an ID found.")
+            return
+
+        total_products = sum(len(r["materials"]) for r in rows)
+        self.s4.log.clear()
+        self.s4.progress.setValue(0)
+        self.s4.progress.setMaximum(total_products)
+        self.s4.status_lbl.setText(f"Starting… ({total_products} products across {len(rows)} rows)")
+        self.s5.reset(list(SET_HEADERS))
+        self.s5.count_lbl.setText("0 rows")
+
+        self.set_worker = SetProductsWorker(rows, self._store, self._terms_cache, self._attrs_list)
+        self.set_worker.log.connect(self.s4.append_log)
+        self.set_worker.progress.connect(self.s4.set_progress)
+        self.set_worker.row_ready.connect(self.s5.add_row)
+        self.set_worker.finished.connect(self._on_done)
+        self.set_worker.product_set.connect(self._on_product_set)
+
+        self.s4.btn_start.setEnabled(False)
+        self.s4.btn_stop.setEnabled(True)
+        self.btn_back.setEnabled(False)
+        self.set_worker.start()
+
+    def _on_product_set(self, pid: str, permalink: str):
+        if permalink:
+            self.s4.append_log(f"\n  URL: {permalink}")
+        self.s4.btn_confirm.setVisible(True)
+        self.s4.btn_confirm.setEnabled(True)
+
+    def _confirm_product(self):
+        self.s4.btn_confirm.setEnabled(False)
+        self.s4.btn_confirm.setVisible(False)
+        if self.set_worker:
+            self.set_worker.confirm()
+
+    # ------------------------------------------------------------------
+    # Worker lifecycle — Compare modes
+    # ------------------------------------------------------------------
+
+    def _start_compare(self):
+        if not self._compare_config:
+            return
+
+        self.s4.log.clear()
+        self.s4.progress.setValue(0)
+        self.s4.status_lbl.setText("Starting…")
+
+        self.compare_worker = CompareWorker(self._compare_config)
+        self.compare_worker.log.connect(self.s4.append_log)
+        self.compare_worker.progress.connect(self.s4.set_progress)
+        self.compare_worker.row_ready.connect(self.s5.add_row)
+        self.compare_worker.finished.connect(self._on_compare_done)
+
+        self.s4.btn_start.setEnabled(False)
+        self.s4.btn_stop.setEnabled(True)
+        self.btn_back.setEnabled(False)
+        self.compare_worker.start()
+
+    def _on_compare_done(self):
+        self.s4.btn_start.setEnabled(True)
+        self.s4.btn_stop.setEnabled(False)
+        self.btn_back.setEnabled(True)
+        self.s4.status_lbl.setText(f"Done — {len(self.s5.results)} issue(s) found.")
+        self.stack.setCurrentIndex(_IDX_S5)
         self._update_nav()

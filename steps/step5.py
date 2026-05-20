@@ -16,6 +16,7 @@ class Step5(QWidget):
     def __init__(self):
         super().__init__()
         self.results = []
+        self._headers = RESULT_HEADERS
         self._build()
 
     def _build(self):
@@ -38,14 +39,24 @@ class Step5(QWidget):
         layout.addLayout(top)
 
         self.table = QTableWidget()
-        self.table.setColumnCount(len(RESULT_HEADERS))
-        self.table.setHorizontalHeaderLabels(RESULT_HEADERS)
+        self.table.setColumnCount(len(self._headers))
+        self.table.setHorizontalHeaderLabels(self._headers)
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
         self.table.horizontalHeader().setStretchLastSection(True)
         self.table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
         self.table.setAlternatingRowColors(True)
         self.table.setStyleSheet("QTableWidget { alternate-background-color: #252538; }")
         layout.addWidget(self.table, stretch=1)
+
+    def reset(self, headers: list):
+        """Clear results and reconfigure columns for a new run."""
+        self._headers = headers
+        self.results.clear()
+        self.table.clear()
+        self.table.setRowCount(0)
+        self.table.setColumnCount(len(headers))
+        self.table.setHorizontalHeaderLabels(headers)
+        self.count_lbl.setText("0 rows")
 
     def add_row(self, row_data):
         self.results.append(row_data)
@@ -71,6 +82,6 @@ class Step5(QWidget):
             return
         with open(path, "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f)
-            w.writerow(RESULT_HEADERS)
+            w.writerow(self._headers)
             w.writerows(self.results)
         QMessageBox.information(self, "Exported", f"Saved to:\n{path}")

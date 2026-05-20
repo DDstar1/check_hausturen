@@ -1,0 +1,1082 @@
+{
+  "id": 19801,
+  "name": "Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung",
+  "slug": "typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung",
+  "permalink": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/",
+  "date_created": "2025-04-14T12:25:54",
+  "date_created_gmt": "2025-04-14T10:25:54",
+  "date_modified": "2026-05-20T19:04:10",
+  "date_modified_gmt": "2026-05-20T17:04:10",
+  "type": "variable",
+  "status": "publish",
+  "featured": false,
+  "catalog_visibility": "visible",
+  "description": "",
+  "short_description": "",
+  "sku": "",
+  "price": "1255.27",
+  "regular_price": "",
+  "sale_price": "",
+  "date_on_sale_from": null,
+  "date_on_sale_from_gmt": null,
+  "date_on_sale_to": null,
+  "date_on_sale_to_gmt": null,
+  "on_sale": false,
+  "purchasable": true,
+  "total_sales": 0,
+  "virtual": false,
+  "downloadable": false,
+  "downloads": [],
+  "download_limit": -1,
+  "download_expiry": -1,
+  "external_url": "",
+  "button_text": "",
+  "tax_status": "taxable",
+  "tax_class": "",
+  "manage_stock": false,
+  "stock_quantity": null,
+  "backorders": "no",
+  "backorders_allowed": false,
+  "backordered": false,
+  "low_stock_amount": null,
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+    "length": "",
+    "width": "",
+    "height": ""
+  },
+  "shipping_required": true,
+  "shipping_taxable": true,
+  "shipping_class": "",
+  "shipping_class_id": 0,
+  "reviews_allowed": true,
+  "average_rating": "0.00",
+  "rating_count": 0,
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "parent_id": 0,
+  "purchase_note": "",
+  "categories": [
+    {
+      "id": 726,
+      "name": "Aluminium-Haustürfüllungen",
+      "slug": "aluminium-haustuerfuellungen"
+    },
+    {
+      "id": 708,
+      "name": "Haustürfüllungen",
+      "slug": "haustuerfuellungen"
+    },
+    {
+      "id": 712,
+      "name": "KLASSISCH – Rodenberg Premium Aluminium-Haustürfüllungen",
+      "slug": "klassisch-rodenberg-premium-aluminium-haustuerfuellungen"
+    },
+    {
+      "id": 709,
+      "name": "Rodenberg Premium Aluminium-Haustürfüllungen",
+      "slug": "rodenberg-premium-aluminium-haustuerfuellungen"
+    }
+  ],
+  "brands": [],
+  "tags": [],
+  "images": [
+    {
+      "id": 17866,
+      "date_created": "2024-06-27T16:02:35",
+      "date_created_gmt": "2024-06-27T12:02:35",
+      "date_modified": "2024-06-27T16:02:45",
+      "date_modified_gmt": "2024-06-27T12:02:45",
+      "src": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg",
+      "name": "1004-65_satinato_dunkelgruen_7.100.06",
+      "alt": "1004-65_satinato_dunkelgruen_7.100.06",
+      "srcset": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg 318w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06-156x300.jpg 156w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06-300x577.jpg 300w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06-31x60.jpg 31w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06-47x90.jpg 47w",
+      "sizes": "(max-width: 318px) 100vw, 318px",
+      "thumbnail": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06-300x577.jpg"
+    },
+    {
+      "id": 17867,
+      "date_created": "2024-06-27T16:03:00",
+      "date_created_gmt": "2024-06-27T12:03:00",
+      "date_modified": "2024-06-27T16:03:00",
+      "date_modified_gmt": "2024-06-27T12:03:00",
+      "src": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03.jpg",
+      "name": "1004-65_musselinM6_5.102.03",
+      "alt": "",
+      "srcset": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03.jpg 318w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03-156x300.jpg 156w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03-300x577.jpg 300w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03-31x60.jpg 31w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03-47x90.jpg 47w",
+      "sizes": "(max-width: 318px) 100vw, 318px",
+      "thumbnail": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_musselinM6_5.102.03-300x577.jpg"
+    },
+    {
+      "id": 17869,
+      "date_created": "2024-06-27T16:03:46",
+      "date_created_gmt": "2024-06-27T12:03:46",
+      "date_modified": "2024-06-27T16:03:46",
+      "date_modified_gmt": "2024-06-27T12:03:46",
+      "src": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03.jpg",
+      "name": "1004-65_mcarre_goak_5.601.03",
+      "alt": "",
+      "srcset": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03.jpg 318w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03-156x300.jpg 156w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03-300x577.jpg 300w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03-31x60.jpg 31w, https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03-47x90.jpg 47w",
+      "sizes": "(max-width: 318px) 100vw, 318px",
+      "thumbnail": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_mcarre_goak_5.601.03-300x577.jpg"
+    }
+  ],
+  "attributes": [
+    {
+      "id": 18,
+      "name": "Rodenberg Füllung",
+      "slug": "pa_rodenberg-fuellung",
+      "position": 0,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Einsatzfüllung &amp; Aufsatzfüllung"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Rodenberg Ausfuhrung",
+      "slug": "pa_rodenberg-ausfuhrung",
+      "position": 1,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Verglasung"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Rodenberg Breite",
+      "slug": "pa_rodenberg-breite",
+      "position": 2,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Premium Group 750"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Rodenberg Höhe",
+      "slug": "pa_rodenberg-hoehe",
+      "position": 3,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Premium Group 1600"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Rodenberg Element",
+      "slug": "pa_rodenberg-element",
+      "position": 4,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Türfüllung + Seitenteil"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Rodenberg Verglasung",
+      "slug": "pa_rodenberg-verglasung",
+      "position": 5,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Premium 10"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Rodenberg Farbe",
+      "slug": "pa_rodenberg-farbe",
+      "position": 6,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Premium 9"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Rodenberg Seitenteil Breite",
+      "slug": "pa_rodenberg-seitenteil-breite",
+      "position": 7,
+      "visible": false,
+      "variation": true,
+      "options": [
+        "Premium Group 400"
+      ]
+    }
+  ],
+  "default_attributes": [
+    {
+      "id": 18,
+      "name": "Rodenberg Füllung",
+      "option": "einsatzfuellung-aufsatzfuellung"
+    },
+    {
+      "id": 19,
+      "name": "Rodenberg Ausfuhrung",
+      "option": "verglasung"
+    },
+    {
+      "id": 21,
+      "name": "Rodenberg Breite",
+      "option": "premium-group-750"
+    },
+    {
+      "id": 20,
+      "name": "Rodenberg Höhe",
+      "option": "premium-group-1600"
+    },
+    {
+      "id": 34,
+      "name": "Rodenberg Element",
+      "option": "tuerfuellung-seitenteil"
+    },
+    {
+      "id": 16,
+      "name": "Rodenberg Verglasung",
+      "option": "premium-10"
+    },
+    {
+      "id": 17,
+      "name": "Rodenberg Farbe",
+      "option": "premium-9"
+    },
+    {
+      "id": 33,
+      "name": "Rodenberg Seitenteil Breite",
+      "option": "premium-group-400"
+    }
+  ],
+  "variations": [
+    24699
+  ],
+  "grouped_products": [],
+  "menu_order": 924,
+  "price_html": "<span class=\"from\">Ab: </span><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&euro;</span>1.255,27</bdi></span> <small> <small class=\"woocommerce-price-suffix\">inkl. 19% MwSt. zzgl. Versandkosten &amp; 5% Materialzuschlag</small></small>",
+  "related_ids": [
+    19774,
+    19768,
+    19777,
+    19781,
+    19788
+  ],
+  "meta_data": [
+    {
+      "id": 778943,
+      "key": "_product_addons",
+      "value": []
+    },
+    {
+      "id": 778944,
+      "key": "_product_addons_exclude_global",
+      "value": "0"
+    },
+    {
+      "id": 778945,
+      "key": "_shop_swatches",
+      "value": "no"
+    },
+    {
+      "id": 778946,
+      "key": "wc_productdata_options",
+      "value": [
+        {
+          "_product_block": "0",
+          "_top_content": "",
+          "_bottom_content": "",
+          "_bubble_new": "",
+          "_bubble_text": "",
+          "_custom_tab_title": "",
+          "_custom_tab": "",
+          "_product_video": "",
+          "_product_video_size": "",
+          "_product_video_placement": ""
+        }
+      ]
+    },
+    {
+      "id": 778947,
+      "key": "_mkl_pc__is_configurable",
+      "value": "no"
+    },
+    {
+      "id": 778948,
+      "key": "flexible_quantity_settings",
+      "value": {
+        "fq": {
+          "label": "",
+          "unit": "item",
+          "price": "",
+          "sale_price": "",
+          "increment": "",
+          "min_range": "",
+          "max_range": "",
+          "decimals": {
+            "other": {
+              "type": "fixed",
+              "fixed": {
+                "label": "",
+                "unit": "item",
+                "size": ""
+              },
+              "user": {
+                "label": "",
+                "unit": "item",
+                "increment": "",
+                "min_quantity": "",
+                "max_quantity": ""
+              }
+            }
+          },
+          "pricing_table": {
+            "items": {
+              "from": [
+                ""
+              ],
+              "to": [
+                ""
+              ],
+              "price": [
+                ""
+              ],
+              "sale_price": [
+                ""
+              ]
+            }
+          },
+          "shipping_table": {
+            "items": {
+              "from": [
+                ""
+              ],
+              "to": [
+                ""
+              ],
+              "shipping_class": [
+                "-1"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 778949,
+      "key": "tm_meta_cpf",
+      "value": {
+        "mode": "settings",
+        "price_display_mode": "from",
+        "price_display_override": "1255.27",
+        "price_display_override_to": "",
+        "price_display_override_sale": "",
+        "override_display": "",
+        "override_final_total_box": "",
+        "override_show_options_total": "",
+        "override_show_final_total": ""
+      }
+    },
+    {
+      "id": 778950,
+      "key": "_wpb_vc_js_status",
+      "value": "false"
+    },
+    {
+      "id": 778951,
+      "key": "_yoast_wpseo_primary_product_cat",
+      "value": ""
+    },
+    {
+      "id": 778952,
+      "key": "_yoast_wpseo_estimated-reading-time-minutes",
+      "value": "1"
+    },
+    {
+      "id": 778953,
+      "key": "_yoast_wpseo_wordproof_timestamp",
+      "value": ""
+    },
+    {
+      "id": 778954,
+      "key": "tm_meta",
+      "value": {
+        "tmfbuilder": {
+          "sections_internal_name": [
+            "Abschnitt"
+          ],
+          "section_header_size": [
+            "2"
+          ],
+          "section_header_title": [
+            ""
+          ],
+          "section_header_title_mode": [
+            ""
+          ],
+          "section_header_title_position": [
+            ""
+          ],
+          "section_header_title_color": [
+            ""
+          ],
+          "section_header_subtitle": [
+            ""
+          ],
+          "section_header_subtitle_position": [
+            ""
+          ],
+          "section_header_subtitle_color": [
+            ""
+          ],
+          "section_divider_type": [
+            "none"
+          ],
+          "sections": [
+            1
+          ],
+          "sections_slides": [
+            ""
+          ],
+          "sections_tabs_labels": [
+            ""
+          ],
+          "sections_size": [
+            "w100"
+          ],
+          "sections_uniqid": [
+            "69fa0ca919a974.47761245"
+          ],
+          "sections_style": [
+            ""
+          ],
+          "sections_background_color": [
+            ""
+          ],
+          "sections_label_background_color": [
+            ""
+          ],
+          "sections_subtitle_background_color": [
+            ""
+          ],
+          "sections_placement": [
+            "before"
+          ],
+          "sections_type": [
+            ""
+          ],
+          "sections_popupbutton": [
+            ""
+          ],
+          "sections_popupbuttontext": [
+            ""
+          ],
+          "sections_class": [
+            ""
+          ],
+          "sections_clogic": [
+            ""
+          ],
+          "sections_logicrules": [
+            "{\"toggle\":\"show\",\"rules\":[]}"
+          ],
+          "sections_logic": [
+            ""
+          ],
+          "sections_repeater": [
+            ""
+          ],
+          "sections_repeater_quantity": [
+            ""
+          ],
+          "sections_repeater_min_rows": [
+            ""
+          ],
+          "sections_repeater_max_rows": [
+            ""
+          ],
+          "sections_repeater_button_label": [
+            ""
+          ],
+          "element_type": [
+            "variations"
+          ],
+          "div_size": [
+            "w100"
+          ],
+          "variations_internal_name": [
+            "Variationen"
+          ],
+          "variations_header_size": [
+            "3"
+          ],
+          "variations_header_title": [
+            ""
+          ],
+          "variations_header_title_mode": [
+            ""
+          ],
+          "variations_header_title_position": [
+            ""
+          ],
+          "variations_header_title_color": [
+            ""
+          ],
+          "variations_header_subtitle": [
+            ""
+          ],
+          "variations_header_subtitle_position": [
+            ""
+          ],
+          "variations_header_subtitle_color": [
+            ""
+          ],
+          "variations_divider_type": [
+            "none"
+          ],
+          "variations_disabled": "1",
+          "variations_options": {
+            "pa_rodenberg-fuellung": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "einsatzfuellung-aufsatzfuellung": ""
+              },
+              "variations_image": {
+                "einsatzfuellung-aufsatzfuellung": ""
+              },
+              "variations_imagep": {
+                "einsatzfuellung-aufsatzfuellung": ""
+              }
+            },
+            "pa_rodenberg-ausfuhrung": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "verglasung": ""
+              },
+              "variations_image": {
+                "verglasung": ""
+              },
+              "variations_imagep": {
+                "verglasung": ""
+              }
+            },
+            "pa_rodenberg-breite": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "premium-group-750": ""
+              },
+              "variations_image": {
+                "premium-group-750": ""
+              },
+              "variations_imagep": {
+                "premium-group-750": ""
+              }
+            },
+            "pa_rodenberg-hoehe": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "premium-group-1600": ""
+              },
+              "variations_image": {
+                "premium-group-1600": ""
+              },
+              "variations_imagep": {
+                "premium-group-1600": ""
+              }
+            },
+            "pa_rodenberg-element": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "tuerfuellung-seitenteil": ""
+              },
+              "variations_image": {
+                "tuerfuellung-seitenteil": ""
+              },
+              "variations_imagep": {
+                "tuerfuellung-seitenteil": ""
+              }
+            },
+            "pa_rodenberg-verglasung": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "premium-10": ""
+              },
+              "variations_image": {
+                "premium-10": ""
+              },
+              "variations_imagep": {
+                "premium-10": ""
+              }
+            },
+            "pa_rodenberg-farbe": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "premium-9": ""
+              },
+              "variations_image": {
+                "premium-9": ""
+              },
+              "variations_imagep": {
+                "premium-9": ""
+              }
+            },
+            "pa_rodenberg-seitenteil-breite": {
+              "variations_display_as": "select",
+              "variations_label": "",
+              "variations_show_reset_button": "",
+              "variations_class": "",
+              "variations_items_per_row": "",
+              "variations_items_per_row_tablets": "",
+              "variations_items_per_row_tablets_small": "",
+              "variations_items_per_row_smartphones": "",
+              "variations_items_per_row_iphone5": "",
+              "variations_items_per_row_iphone6": "",
+              "variations_items_per_row_iphone6_plus": "",
+              "variations_items_per_row_samsung_galaxy": "",
+              "variations_items_per_row_tablets_galaxy": "",
+              "variations_item_width": "",
+              "variations_item_height": "",
+              "variations_changes_product_image": "",
+              "variations_show_name": "hide",
+              "variations_color": {
+                "premium-group-400": ""
+              },
+              "variations_image": {
+                "premium-group-400": ""
+              },
+              "variations_imagep": {
+                "premium-group-400": ""
+              }
+            }
+          },
+          "variations_uniqid": [
+            "6a0de5b6a26388.55035984"
+          ],
+          "variations_logicrules": [
+            "false"
+          ]
+        }
+      }
+    },
+    {
+      "id": 778955,
+      "key": "_yoast_wpseo_primary_product_brand",
+      "value": ""
+    },
+    {
+      "id": 785584,
+      "key": "_yoast_wpseo_content_score",
+      "value": "90"
+    },
+    {
+      "id": 890916,
+      "key": "_alg_checkout_fees_enabled_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890917,
+      "key": "_alg_checkout_fees_title_bacs",
+      "value": ""
+    },
+    {
+      "id": 890918,
+      "key": "_alg_checkout_fees_global_override_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890919,
+      "key": "_alg_checkout_fees_type_bacs",
+      "value": "fixed"
+    },
+    {
+      "id": 890920,
+      "key": "_alg_checkout_fees_value_bacs",
+      "value": ""
+    },
+    {
+      "id": 890921,
+      "key": "_alg_checkout_fees_min_fee_bacs",
+      "value": ""
+    },
+    {
+      "id": 890922,
+      "key": "_alg_checkout_fees_max_fee_bacs",
+      "value": ""
+    },
+    {
+      "id": 890923,
+      "key": "_alg_checkout_fees_coupons_rule_bacs",
+      "value": "disabled"
+    },
+    {
+      "id": 890924,
+      "key": "_alg_checkout_fees_title_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 890925,
+      "key": "_alg_checkout_fees_global_override_fee_2_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890926,
+      "key": "_alg_checkout_fees_type_2_bacs",
+      "value": "fixed"
+    },
+    {
+      "id": 890927,
+      "key": "_alg_checkout_fees_value_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 890928,
+      "key": "_alg_checkout_fees_min_fee_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 890929,
+      "key": "_alg_checkout_fees_max_fee_2_bacs",
+      "value": ""
+    },
+    {
+      "id": 890930,
+      "key": "_alg_checkout_fees_coupons_rule_2_bacs",
+      "value": "disabled"
+    },
+    {
+      "id": 890931,
+      "key": "_alg_checkout_fees_min_cart_amount_bacs",
+      "value": ""
+    },
+    {
+      "id": 890932,
+      "key": "_alg_checkout_fees_max_cart_amount_bacs",
+      "value": ""
+    },
+    {
+      "id": 890933,
+      "key": "_alg_checkout_fees_rounding_enabled_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890934,
+      "key": "_alg_checkout_fees_rounding_precision_bacs",
+      "value": ""
+    },
+    {
+      "id": 890935,
+      "key": "_alg_checkout_fees_tax_enabled_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890936,
+      "key": "_alg_checkout_fees_tax_class_bacs",
+      "value": "0"
+    },
+    {
+      "id": 890937,
+      "key": "_alg_checkout_fees_exclude_shipping_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890938,
+      "key": "_alg_checkout_fees_add_taxes_bacs",
+      "value": "no"
+    },
+    {
+      "id": 890939,
+      "key": "_alg_checkout_fees_percent_usage_bacs",
+      "value": "for_all_cart"
+    },
+    {
+      "id": 890940,
+      "key": "_alg_checkout_fees_fixed_usage_bacs",
+      "value": "once"
+    }
+  ],
+  "stock_status": "instock",
+  "has_options": true,
+  "post_password": "",
+  "global_unique_id": "",
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung &#8212; haustürenshop</title>\n<!-- Nur für Administratoren: diese Seite zeigt keine Meta-Beschreibung, da bisher keine vorhanden ist. Verfasse entweder eine speziell für diese Seite oder gehe in das [Yoast SEO - Einstellungen]-Menü und richte eine Vorlage ein. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"de_DE\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung &#8212; haustürenshop\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"haustürenshop\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"article:modified_time\" content=\"2026-05-20T17:04:10+00:00\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"318\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"612\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:label1\" content=\"Geschätzte Lesezeit\" class=\"yoast-seo-meta-tag\" />\n\t<meta name=\"twitter:data1\" content=\"1 Minute\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/\",\"url\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/\",\"name\":\"Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung &#8212; haustürenshop\",\"isPartOf\":{\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/haustuerenshop.paultec.de\\/wp-content\\/uploads\\/2024\\/06\\/1004-65_satinato_dunkelgruen_7.100.06.jpg\",\"datePublished\":\"2025-04-14T10:25:54+00:00\",\"dateModified\":\"2026-05-20T17:04:10+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/#breadcrumb\"},\"inLanguage\":\"de\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"de\",\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/#primaryimage\",\"url\":\"https:\\/\\/haustuerenshop.paultec.de\\/wp-content\\/uploads\\/2024\\/06\\/1004-65_satinato_dunkelgruen_7.100.06.jpg\",\"contentUrl\":\"https:\\/\\/haustuerenshop.paultec.de\\/wp-content\\/uploads\\/2024\\/06\\/1004-65_satinato_dunkelgruen_7.100.06.jpg\",\"width\":318,\"height\":612,\"caption\":\"1004-65_satinato_dunkelgruen_7.100.06\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/produkt\\/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Startseite\",\"item\":\"https:\\/\\/haustuerenshop.paultec.de\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Shop\",\"item\":\"https:\\/\\/haustuerenshop.paultec.de\\/shop\\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/#website\",\"url\":\"https:\\/\\/haustuerenshop.paultec.de\\/\",\"name\":\"haustürenshop\",\"description\":\"Haustüren online kaufen\",\"publisher\":{\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/haustuerenshop.paultec.de\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"de\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/#organization\",\"name\":\"haustuerenshop.paultec.de\",\"url\":\"https:\\/\\/haustuerenshop.paultec.de\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"de\",\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"http:\\/\\/haustuerenshop.paultec.de\\/wp-content\\/uploads\\/2020\\/08\\/Logo-Haustürenshop-black.png\",\"contentUrl\":\"http:\\/\\/haustuerenshop.paultec.de\\/wp-content\\/uploads\\/2020\\/08\\/Logo-Haustürenshop-black.png\",\"width\":1077,\"height\":387,\"caption\":\"haustuerenshop.paultec.de\"},\"image\":{\"@id\":\"https:\\/\\/haustuerenshop.paultec.de\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung &#8212; haustürenshop",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/",
+    "og_locale": "de_DE",
+    "og_type": "article",
+    "og_title": "Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung &#8212; haustürenshop",
+    "og_url": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/",
+    "og_site_name": "haustürenshop",
+    "article_modified_time": "2026-05-20T17:04:10+00:00",
+    "og_image": [
+      {
+        "width": 318,
+        "height": 612,
+        "url": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Geschätzte Lesezeit": "1 Minute"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/",
+          "url": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/",
+          "name": "Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung &#8212; haustürenshop",
+          "isPartOf": {
+            "@id": "https://haustuerenshop.paultec.de/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/#primaryimage"
+          },
+          "image": {
+            "@id": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/#primaryimage"
+          },
+          "thumbnailUrl": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg",
+          "datePublished": "2025-04-14T10:25:54+00:00",
+          "dateModified": "2026-05-20T17:04:10+00:00",
+          "breadcrumb": {
+            "@id": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/#breadcrumb"
+          },
+          "inLanguage": "de",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "de",
+          "@id": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/#primaryimage",
+          "url": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg",
+          "contentUrl": "https://haustuerenshop.paultec.de/wp-content/uploads/2024/06/1004-65_satinato_dunkelgruen_7.100.06.jpg",
+          "width": 318,
+          "height": 612,
+          "caption": "1004-65_satinato_dunkelgruen_7.100.06"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://haustuerenshop.paultec.de/produkt/typ-1004-65-rodenberg-premium-aluminium-haustuerfuellung/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Startseite",
+              "item": "https://haustuerenshop.paultec.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Shop",
+              "item": "https://haustuerenshop.paultec.de/shop/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Typ 1004-65 Rodenberg Premium Aluminium-Haustürfüllung"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://haustuerenshop.paultec.de/#website",
+          "url": "https://haustuerenshop.paultec.de/",
+          "name": "haustürenshop",
+          "description": "Haustüren online kaufen",
+          "publisher": {
+            "@id": "https://haustuerenshop.paultec.de/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://haustuerenshop.paultec.de/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "de"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://haustuerenshop.paultec.de/#organization",
+          "name": "haustuerenshop.paultec.de",
+          "url": "https://haustuerenshop.paultec.de/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "de",
+            "@id": "https://haustuerenshop.paultec.de/#/schema/logo/image/",
+            "url": "http://haustuerenshop.paultec.de/wp-content/uploads/2020/08/Logo-Haustürenshop-black.png",
+            "contentUrl": "http://haustuerenshop.paultec.de/wp-content/uploads/2020/08/Logo-Haustürenshop-black.png",
+            "width": 1077,
+            "height": 387,
+            "caption": "haustuerenshop.paultec.de"
+          },
+          "image": {
+            "@id": "https://haustuerenshop.paultec.de/#/schema/logo/image/"
+          }
+        }
+      ]
+    }
+  },
+  "jetpack_sharing_enabled": true,
+  "_links": {
+    "self": [
+      {
+        "href": "https://haustuerenshop.paultec.de/wp-json/wc/v3/products/19801",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://haustuerenshop.paultec.de/wp-json/wc/v3/products"
+      }
+    ]
+  }
+}

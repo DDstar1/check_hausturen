@@ -83,6 +83,9 @@ RESULT_HEADERS = [
     "Vars Match", "Mismatch", "URL",
 ]
 
+COMPARE_HEADERS_W2M = ["Product Name", "Product ID", "Slug", "Status", "URL"]
+COMPARE_HEADERS_M2W = ["Product Name", "Excel ID", "Status", "URL"]
+
 
 def find_id_columns(headers: list) -> list:
     """

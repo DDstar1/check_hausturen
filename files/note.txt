@@ -1,0 +1,33 @@
+okay so be using default attribtes to compare with my excel file 
+
+and make sure the number of items in defailt attributes and attributes are the same 
+
+so it would be purchasble
+
+
+TARGETS = [
+    {
+        "cat_slug": "rodenberg-premium-aluminium-haustueren",
+        "id_col":   "Aluminium_tur_id",
+        "base_col": "Aluminium_tur_base_price",
+        "ab_col":   "Aluminium_tur_ab_price",
+    },
+    {
+        "cat_slug": "rodenberg-premium-kunststoff-haustueren",
+        "id_col":   "Kunstoff_tur_id",
+        "base_col": "Kunstoff_tur_base_price",
+        "ab_col":   "Kunstoff_tur_ab_price",
+    },
+    {
+        "cat_slug": "rodenberg-premium-aluminium-haustuerfuellungen",
+        "id_col":   "Aluminium_turfullungen_id",
+        "base_col": "Aluminium_turfullungen_base_price",
+        "ab_col":   "Aluminium_turfullungen_ab_price",
+    },
+    {
+        "cat_slug": "rodenberg-premium-kunststoff-haustuerfuellungen",
+        "id_col":   "Kunstoff_turfullungen_id",
+        "base_col": "Kunstoff_turfullungen_base_price",
+        "ab_col":   "Kunstoff_turfullungen_ab_price",
+    },
+]
