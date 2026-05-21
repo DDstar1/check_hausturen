@@ -6,9 +6,7 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[
-        ('.env', '.'),
-    ],
+    datas=[],
     hiddenimports=[
         'PySide6.QtCore',
         'PySide6.QtGui',
@@ -18,7 +16,6 @@ a = Analysis(
         'requests',
         'requests.auth',
         'urllib3',
-        'dotenv',
     ],
     hookspath=[],
     hooksconfig={},

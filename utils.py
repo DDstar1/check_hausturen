@@ -1,46 +1,6 @@
 """Constants and helper functions shared across the app."""
 
-import os
 import re
-import sys
-from dotenv import load_dotenv
-
-# ── Load .env ─────────────────────────────────────────────────────────────────
-# When frozen by PyInstaller the bundle root is sys._MEIPASS; in dev it sits
-# next to this file.
-_env_path = os.path.join(
-    sys._MEIPASS if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__)),
-    ".env",
-)
-load_dotenv(_env_path)
-
-
-def _load_stores() -> dict:
-    """
-    Build the WOO_STORES dict from .env entries.
-
-    Every store needs three vars using a shared prefix:
-        PREFIX_LABEL   — display name shown in the UI
-        PREFIX_URL     — store base URL
-        PREFIX_KEY     — WooCommerce consumer key
-        PREFIX_SECRET  — WooCommerce consumer secret
-
-    Add a new store by adding another PREFIX_* block to .env — no code change needed.
-    """
-    prefixes = sorted({k[:-6] for k in os.environ if k.endswith("_LABEL")})
-    stores = {}
-    for p in prefixes:
-        label  = os.environ.get(f"{p}_LABEL", p)
-        url    = os.environ.get(f"{p}_URL", "")
-        key    = os.environ.get(f"{p}_KEY", "")
-        secret = os.environ.get(f"{p}_SECRET", "")
-        if url and key and secret:
-            stores[label] = {"url": url, "consumer_key": key, "consumer_secret": secret}
-    return stores
-
-
-WOO_STORES = _load_stores()
-# ─────────────────────────────────────────────────────────────────────────────
 
 ATTR_COLUMN_MAP = {
     "FÜLLUNG":                    "rodenberg-fuellung",

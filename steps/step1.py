@@ -1,14 +1,12 @@
-"""Step 1 — Store selection + Excel file + table selection."""
+"""Step 1 — WooCommerce credentials + Excel file + table selection."""
 
 import os
 import openpyxl
 
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
-    QFileDialog, QComboBox, QGroupBox, QMessageBox, QSizePolicy,
+    QFileDialog, QComboBox, QGroupBox, QMessageBox, QSizePolicy, QLineEdit,
 )
-
-from utils import WOO_STORES
 
 
 class Step1(QWidget):
@@ -24,12 +22,12 @@ class Step1(QWidget):
         layout.setSpacing(16)
         layout.setContentsMargins(40, 28, 40, 28)
 
-        title = QLabel("Step 1 — Select Store & Excel File")
+        title = QLabel("Step 1 — Connect & Select Excel File")
         title.setObjectName("step_title")
         layout.addWidget(title)
 
         sub = QLabel(
-            "Pick which WooCommerce store to validate against, "
+            "Enter your WooCommerce store credentials, "
             "then choose your masterlist Excel file and table."
         )
         sub.setObjectName("step_sub")
@@ -37,17 +35,30 @@ class Step1(QWidget):
         layout.addWidget(sub)
         layout.addSpacing(8)
 
-        # ── Store selector ───────────────────────────────────────────────────
+        # ── Credentials ──────────────────────────────────────────────────────
         sg = QGroupBox("WooCommerce Store")
-        sgl = QHBoxLayout(sg)
-        self.store_combo = QComboBox()
-        self.store_combo.addItems(list(WOO_STORES.keys()))
-        self.store_url_lbl = QLabel()
-        self.store_url_lbl.setStyleSheet("color: #6c7086; font-size: 11px;")
-        self.store_combo.currentTextChanged.connect(self._on_store_changed)
-        self._on_store_changed(self.store_combo.currentText())
-        sgl.addWidget(self.store_combo)
-        sgl.addWidget(self.store_url_lbl, stretch=1)
+        sgl = QVBoxLayout(sg)
+
+        row1 = QHBoxLayout()
+        row1.addWidget(QLabel("URL:"))
+        self.url_edit = QLineEdit()
+        self.url_edit.setPlaceholderText("https://…")
+        row1.addWidget(self.url_edit, stretch=1)
+        sgl.addLayout(row1)
+
+        row2 = QHBoxLayout()
+        row2.addWidget(QLabel("Consumer Key:"))
+        self.key_edit = QLineEdit()
+        self.key_edit.setPlaceholderText("ck_…")
+        row2.addWidget(self.key_edit, stretch=1)
+        row2.addSpacing(16)
+        row2.addWidget(QLabel("Consumer Secret:"))
+        self.secret_edit = QLineEdit()
+        self.secret_edit.setPlaceholderText("cs_…")
+        self.secret_edit.setEchoMode(QLineEdit.EchoMode.Password)
+        row2.addWidget(self.secret_edit, stretch=1)
+        sgl.addLayout(row2)
+
         layout.addWidget(sg)
 
         # ── Excel file ───────────────────────────────────────────────────────
@@ -75,10 +86,6 @@ class Step1(QWidget):
         layout.addWidget(tg)
 
         layout.addStretch()
-
-    def _on_store_changed(self, name):
-        store = WOO_STORES.get(name, {})
-        self.store_url_lbl.setText(store.get("url", ""))
 
     def _browse(self):
         path, _ = QFileDialog.getOpenFileName(
@@ -122,8 +129,13 @@ class Step1(QWidget):
             self.table_info_lbl.setText("")
 
     def get_store(self) -> dict | None:
-        """Returns the selected store config dict from WOO_STORES."""
-        return WOO_STORES.get(self.store_combo.currentText())
+        """Returns the store config built from the URL, key, and secret fields."""
+        url    = self.url_edit.text().strip().rstrip("/")
+        key    = self.key_edit.text().strip()
+        secret = self.secret_edit.text().strip()
+        if not url or not key or not secret:
+            return None
+        return {"url": url, "consumer_key": key, "consumer_secret": secret}
 
     def get_table(self):
         """Returns (workbook, sheet_name, table_ref) or None."""

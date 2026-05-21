@@ -18,6 +18,10 @@ from overlay import LoadingOverlay
 from utils import excel_value_to_slug, RESULT_HEADERS
 
 
+# Attrs/terms fetched once per store URL for the lifetime of the process
+_ATTRS_CACHE: dict[str, tuple[list, dict]] = {}  # url → (wc_attrs_raw, terms_cache)
+
+
 class _ValidationThread(QThread):
     """Runs WooCommerce attribute/term validation in the background."""
     done   = Signal(list, list, list, object)
@@ -37,21 +41,25 @@ class _ValidationThread(QThread):
             self.failed.emit(str(e))
 
     def _validate(self):
-        wc_attrs = _api_get("products/attributes", self.store, {"per_page": 100})
-
-        terms_cache = {}
-        for a in wc_attrs:
-            try:
-                raw = _api_get(
-                    f"products/attributes/{a['id']}/terms",
-                    self.store,
-                    {"per_page": 100},
-                )
-                terms_cache[a["id"]] = {
-                    t["slug"]: _html.unescape(t["name"]) for t in raw
-                }
-            except Exception:
-                terms_cache[a["id"]] = {}
+        url = self.store["url"]
+        if url in _ATTRS_CACHE:
+            wc_attrs, terms_cache = _ATTRS_CACHE[url]
+        else:
+            wc_attrs = _api_get("products/attributes", self.store, {"per_page": 100})
+            terms_cache = {}
+            for a in wc_attrs:
+                try:
+                    raw = _api_get(
+                        f"products/attributes/{a['id']}/terms",
+                        self.store,
+                        {"per_page": 100},
+                    )
+                    terms_cache[a["id"]] = {
+                        t["slug"]: _html.unescape(t["name"]) for t in raw
+                    }
+                except Exception:
+                    terms_cache[a["id"]] = {}
+            _ATTRS_CACHE[url] = (wc_attrs, terms_cache)
 
         def _norm(s):
             s = s.replace("_", "-")
@@ -236,7 +244,7 @@ class MainWindow(QMainWindow):
         i = self._idx()
         if i == _IDX_CAT:
             self.stack.setCurrentIndex(_IDX_MODE)
-        elif i == _IDX_S4 and self._mode != "check_masterlist":
+        elif i == _IDX_S4 and self._mode == "compare_category":
             self.stack.setCurrentIndex(_IDX_CAT)
         elif i > _IDX_MODE:
             self.stack.setCurrentIndex(i - 1)
@@ -251,6 +259,9 @@ class MainWindow(QMainWindow):
                 QMessageBox.warning(self, "No table", "Please select an Excel file and table first.")
                 return
             self._store = self.s1.get_store()
+            if not self._store:
+                QMessageBox.warning(self, "Missing credentials", "Please enter the Consumer Key and Consumer Secret for the selected store.")
+                return
             self._wb, self._sheet_name, self._table_ref = result
             self.s2.load_columns(self._wb, self._sheet_name, self._table_ref)
 
@@ -650,7 +661,8 @@ class MainWindow(QMainWindow):
         self.s5.reset(list(SET_HEADERS))
         self.s5.count_lbl.setText("0 rows")
 
-        self.set_worker = SetProductsWorker(rows, self._store, self._terms_cache, self._attrs_list)
+        custom = self.s3.get_custom_checks()
+        self.set_worker = SetProductsWorker(rows, self._store, self._terms_cache, self._attrs_list, custom)
         self.set_worker.log.connect(self.s4.append_log)
         self.set_worker.progress.connect(self.s4.set_progress)
         self.set_worker.row_ready.connect(self.s5.add_row)

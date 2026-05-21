@@ -14,11 +14,13 @@ for each set found.
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import requests
 from requests.auth import HTTPBasicAuth
 import openpyxl
 
-from utils import WOO_STORES, find_id_columns, excel_value_to_slug, is_ab_price_showing, extract_ab_price, parse_price
+from utils import find_id_columns, excel_value_to_slug, is_ab_price_showing, extract_ab_price, parse_price
 
 # ── API helpers ───────────────────────────────────────────────────────────────
 
@@ -66,19 +68,11 @@ def _prices(product):
 # ── Store picker ──────────────────────────────────────────────────────────────
 
 def _pick_store():
-    names = list(WOO_STORES.keys())
-    if len(names) == 1:
-        return WOO_STORES[names[0]]
-    print("Select store:")
-    for i, n in enumerate(names, 1):
-        print(f"  {i}. {n}")
-    while True:
-        try:
-            idx = int(input("Enter number: ")) - 1
-            if 0 <= idx < len(names):
-                return WOO_STORES[names[idx]]
-        except (ValueError, KeyboardInterrupt):
-            pass
+    import getpass
+    url    = input("Store URL: ").strip().rstrip("/")
+    key    = input("Consumer Key: ").strip()
+    secret = getpass.getpass("Consumer Secret: ").strip()
+    return {"url": url, "consumer_key": key, "consumer_secret": secret}
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 

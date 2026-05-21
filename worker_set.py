@@ -43,14 +43,16 @@ class SetProductsWorker(QThread):
     finished    = Signal()
     product_set = Signal(str, str)  # (product_id, permalink)
 
-    def __init__(self, excel_rows: list, store: dict, terms_cache: dict = None, attrs_list: list = None):
+    def __init__(self, excel_rows: list, store: dict, terms_cache: dict = None,
+                 attrs_list: list = None, custom_checks: list = None):
         super().__init__()
-        self.excel_rows     = excel_rows
-        self.store          = store
-        self._terms_cache   = terms_cache or {}
-        self._attrs_list    = attrs_list or []
-        self._stop          = False
-        self._confirm_event = threading.Event()
+        self.excel_rows      = excel_rows
+        self.store           = store
+        self._terms_cache    = terms_cache or {}
+        self._attrs_list     = attrs_list or []
+        self._custom_checks  = custom_checks or []  # [(attr_name, val_slug), ...]
+        self._stop           = False
+        self._confirm_event  = threading.Event()
 
     def stop(self):
         self._stop = True
@@ -133,7 +135,9 @@ class SetProductsWorker(QThread):
                     }
                 ]
 
-        attrs_payload, default_attrs = self._build_attrs_payload(row.get("attr_values", {}), product)
+        attrs_payload, default_attrs = self._build_attrs_payload(
+            row.get("attr_values", {}), product, self._custom_checks
+        )
         if attrs_payload:
             payload["attributes"] = attrs_payload
         if default_attrs:
@@ -200,13 +204,14 @@ class SetProductsWorker(QThread):
     # Attribute helpers
     # ------------------------------------------------------------------
 
-    def _build_attrs_payload(self, attr_values: dict, product: dict) -> tuple:
+    def _build_attrs_payload(self, attr_values: dict, product: dict,
+                             custom_checks: list = None) -> tuple:
         """Returns (attributes_list, default_attributes_list) for the PUT payload.
 
         Uses the globally-fetched attrs_list so attributes not yet on the product
         can still be looked up and added.
         """
-        if not attr_values:
+        if not attr_values and not custom_checks:
             return [], []
 
         # Global attribute lookup (name_lower → {id, name})
@@ -260,5 +265,38 @@ class SetProductsWorker(QThread):
                 self.log.emit(f"  Adding attribute '{attr_name}' to product")
 
             default_attrs.append({"id": attr_id, "name": attr_name, "option": term_slug})
+
+        # Merge custom checks — already have attr_name + val_slug directly
+        for attr_name, val_slug in (custom_checks or []):
+            wc_attr = global_by_name.get(attr_name.lower()) or next(
+                (a for k, a in global_by_name.items()
+                 if k in attr_name.lower() or attr_name.lower() in k),
+                None,
+            )
+            if wc_attr is None:
+                self.log.emit(f"  [WARN] Custom check attribute not found: '{attr_name}'")
+                continue
+
+            attr_id      = wc_attr["id"]
+            attr_name_wc = wc_attr["name"]
+            term_map     = self._terms_cache.get(attr_id, {})
+            display_name = term_map.get(val_slug, val_slug)
+
+            self.log.emit(f"  Setting (custom) '{attr_name_wc}' = '{display_name}' (slug: '{val_slug}')")
+
+            if attr_id not in new_attrs:
+                new_attrs[attr_id] = {
+                    "id":        attr_id,
+                    "name":      attr_name_wc,
+                    "position":  len(new_attrs),
+                    "visible":   False,
+                    "variation": True,
+                    "options":   [display_name],
+                }
+            else:
+                existing_opts = new_attrs[attr_id].get("options", [])
+                if display_name not in existing_opts:
+                    new_attrs[attr_id]["options"] = existing_opts + [display_name]
+            default_attrs.append({"id": attr_id, "name": attr_name_wc, "option": val_slug})
 
         return list(new_attrs.values()), default_attrs

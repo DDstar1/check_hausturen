@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt
 
-from utils import WOO_STORES, find_id_columns
+from utils import find_id_columns
 
 
 class StepCat(QWidget):
@@ -49,17 +49,30 @@ class StepCat(QWidget):
         layout.addWidget(sub)
         layout.addSpacing(8)
 
-        # ── Store ────────────────────────────────────────────────────────────
+        # ── Credentials ──────────────────────────────────────────────────────
         sg = QGroupBox("WooCommerce Store")
-        sgl = QHBoxLayout(sg)
-        self._store_combo = QComboBox()
-        self._store_combo.addItems(list(WOO_STORES.keys()))
-        self._store_url_lbl = QLabel()
-        self._store_url_lbl.setStyleSheet("color: #6c7086; font-size: 11px;")
-        self._store_combo.currentTextChanged.connect(self._on_store_changed)
-        self._on_store_changed(self._store_combo.currentText())
-        sgl.addWidget(self._store_combo)
-        sgl.addWidget(self._store_url_lbl, stretch=1)
+        sgl = QVBoxLayout(sg)
+
+        row1 = QHBoxLayout()
+        row1.addWidget(QLabel("URL:"))
+        self._url_edit = QLineEdit()
+        self._url_edit.setPlaceholderText("https://…")
+        row1.addWidget(self._url_edit, stretch=1)
+        sgl.addLayout(row1)
+
+        row2 = QHBoxLayout()
+        row2.addWidget(QLabel("Consumer Key:"))
+        self._key_edit = QLineEdit()
+        self._key_edit.setPlaceholderText("ck_…")
+        row2.addWidget(self._key_edit, stretch=1)
+        row2.addSpacing(16)
+        row2.addWidget(QLabel("Consumer Secret:"))
+        self._secret_edit = QLineEdit()
+        self._secret_edit.setPlaceholderText("cs_…")
+        self._secret_edit.setEchoMode(QLineEdit.EchoMode.Password)
+        row2.addWidget(self._secret_edit, stretch=1)
+        sgl.addLayout(row2)
+
         layout.addWidget(sg)
 
         # ── Excel file ───────────────────────────────────────────────────────
@@ -120,10 +133,6 @@ class StepCat(QWidget):
 
     # ── Slots ─────────────────────────────────────────────────────────────────
 
-    def _on_store_changed(self, name):
-        store = WOO_STORES.get(name, {})
-        self._store_url_lbl.setText(store.get("url", ""))
-
     def _on_direction_changed(self, _):
         pass  # col group always visible
 
@@ -183,7 +192,6 @@ class StepCat(QWidget):
     # ── Public API ────────────────────────────────────────────────────────────
 
     def get_config(self) -> dict | None:
-        store = WOO_STORES.get(self._store_combo.currentText())
         cat_slug = self._slug_edit.text().strip()
         table_name = self._table_combo.currentText()
 
@@ -193,6 +201,15 @@ class StepCat(QWidget):
         if not cat_slug:
             QMessageBox.warning(self, "Incomplete", "Please enter a WooCommerce category slug.")
             return None
+
+        url    = self._url_edit.text().strip().rstrip("/")
+        key    = self._key_edit.text().strip()
+        secret = self._secret_edit.text().strip()
+        if not url or not key or not secret:
+            QMessageBox.warning(self, "Missing credentials", "Please enter the URL, Consumer Key, and Consumer Secret.")
+            return None
+
+        store = {"url": url, "consumer_key": key, "consumer_secret": secret}
 
         sheet_name, tbl = self._table_map[table_name]
         mode = "masterlist_to_website" if self._btn_m2w.isChecked() else "website_to_masterlist"
